@@ -1,6 +1,5 @@
 defmodule DpwmfJsonGenerator do
   alias Constants
-
   @moduledoc """
   Make json out of a piece
   """
@@ -77,7 +76,6 @@ defmodule DpwmfJsonGenerator do
   end
 
   def fetch_emotion(%{choice: true} = string), do: string
-
   def fetch_emotion(%{speech: speech, speaker: speaker} = string) do
     cond do
       String.at(speech, 0) == "(" ->
